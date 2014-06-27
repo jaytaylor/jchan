@@ -1,5 +1,7 @@
 package fr.loof.jchan;
 
+import fr.loof.jchan.data.Data;
+
 import java.io.File;
 
 /**
@@ -29,5 +31,11 @@ public class Message {
         this.data = data;
         this.ret = ret;
     }
+
+
+    public static Message EMPTY() {
+        return new Message(Data.encode(null));
+    }
+
 
 }
